@@ -1,0 +1,15 @@
+C:\Users\kaks\RiderProjects\SSTattoo\bin\Debug\SSTattoo.exe.config
+C:\Users\kaks\RiderProjects\SSTattoo\bin\Debug\SSTattoo.exe
+C:\Users\kaks\RiderProjects\SSTattoo\bin\Debug\SSTattoo.pdb
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.csproj.AssemblyReference.cache
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.csproj.SuggestedBindingRedirects.cache
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.Properties.Resources.resources
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.csproj.GenerateResource.cache
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.csproj.CoreCompileInputs.cache
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.exe
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.pdb
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.Form1.resources
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.AddReceptionForm.resources
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.SettingsForm.resources
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.ReceptionsEditorForm.resources
+C:\Users\kaks\RiderProjects\SSTattoo\obj\Debug\SSTattoo.ReceptionCloseForm.resources
