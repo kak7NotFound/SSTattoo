@@ -24,7 +24,6 @@ namespace SSTattoo
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
         }
     }
 }

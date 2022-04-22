@@ -23,7 +23,7 @@ namespace SSTattoo
         static void Main(string[] args)
         {
             AttachConsole(ATTACH_PARENT_PROCESS);
-            // new DataBase();
+            new DataBase();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

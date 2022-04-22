@@ -1,30 +1,42 @@
 ﻿using System;
 using System.Data.OleDb;
+using Microsoft.Data.Sqlite;
 
 namespace SSTattoo
 {
     public class DataBase
     {
-        
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\kaks\\Desktop\\a.accdb;";
-
         public DataBase()
         {
-            var myConnection = new OleDbConnection(connectString);
+            using (var connection = new SqliteConnection("Data Source=mainDatabase.sqlite"))
+            {
+                connection.Open();
 
-            myConnection.Open();
-            
-            string query = "SELECT * FROM Customers";
+                var command = connection.CreateCommand();
+                command.CommandText =
+                    @"
+        SELECT lastName
+        FROM Workers
+        WHERE id = 0
+    ";
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var name = reader.GetString(0);
 
-            OleDbCommand command = new OleDbCommand(query, myConnection);
+                        Console.WriteLine($"Hello, {name}!");
+                    }
+                }
+            }
+        }
 
-            OleDbDataReader reader = command.ExecuteReader();
-            command.ExecuteNonQuery();
+        public void GetResult(string cmdText)
+        {
+        }
 
-            Console.Write(reader);
-            
-            reader.Close();
-            
+        public void ExecuteQuery()
+        {
         }
     }
 }
