@@ -1,42 +1,32 @@
 ﻿using System;
-using System.Data.OleDb;
 using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 
 namespace SSTattoo
 {
-    public class DataBase
+    public class DataBase : DbContext
     {
+        private SqliteConnection connection =
+            new SqliteConnection("Data Source=C:\\Users\\kaks\\Documents\\GitHub\\SSTattoo\\mainDatabase.sqlite");
+
         public DataBase()
         {
-            using (var connection = new SqliteConnection("Data Source=mainDatabase.sqlite"))
-            {
-                connection.Open();
-
-                var command = connection.CreateCommand();
-                command.CommandText =
-                    @"
-        SELECT lastName
-        FROM Workers
-        WHERE id = 0
-    ";
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        var name = reader.GetString(0);
-
-                        Console.WriteLine($"Hello, {name}!");
-                    }
-                }
-            }
+            connection.Open();
         }
 
-        public void GetResult(string cmdText)
+        public SqliteDataReader GetReader(string cmdText)
         {
+            var command = connection.CreateCommand();
+            command.CommandText = cmdText;
+
+            return command.ExecuteReader();
         }
 
-        public void ExecuteQuery()
+        public void ExecuteNonQuery(string cmdText)
         {
+            var command = connection.CreateCommand();
+            command.CommandText = cmdText;
+            command.ExecuteNonQuery();
         }
     }
 }

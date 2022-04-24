@@ -42,6 +42,8 @@ namespace SSTattoo
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -119,7 +121,7 @@ namespace SSTattoo
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(212, 103);
+            this.textBox1.Location = new System.Drawing.Point(212, 100);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 20);
             this.textBox1.TabIndex = 9;
@@ -132,11 +134,30 @@ namespace SSTattoo
             this.dateTimePicker1.Size = new System.Drawing.Size(184, 20);
             this.dateTimePicker1.TabIndex = 10;
             // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(12, 145);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 23);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Время:";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(12, 162);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(182, 17);
+            this.listBox1.TabIndex = 12;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // ReceptionsEditorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 347);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox3);
@@ -149,10 +170,14 @@ namespace SSTattoo
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "ReceptionsEditorForm";
-            this.Text = "ReceptionsEditorForm";
+            this.Text = "Редактирование приемов";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ListBox listBox1;
+
+        private System.Windows.Forms.Label label6;
 
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox1;

@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace SSTattoo
 {
@@ -7,6 +8,14 @@ namespace SSTattoo
         public ReceptionsEditorForm()
         {
             InitializeComponent();
+            
+            
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }

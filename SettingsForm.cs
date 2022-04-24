@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace SSTattoo
 {
@@ -7,6 +8,16 @@ namespace SSTattoo
         public SettingsForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new AddTattooForm().Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new AddWorkerForm().Show();
         }
     }
 }
