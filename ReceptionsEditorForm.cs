@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -33,7 +33,7 @@ namespace SSTattoo
                 }
             }
         }
-        
+
         public void fillSavedData()
         {
             savedData.Add("customer", textBox1.Text);
@@ -54,7 +54,7 @@ namespace SSTattoo
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

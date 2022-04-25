@@ -16,5 +16,5 @@ public partial class AddTattooForm : Form
         Program.database.ExecuteNonQuery(
             $"insert into Tattoos (title, price) VALUES ('{this.textBox1.Text}', {this.numericUpDown1.Value})");
     }
-
+    
 }

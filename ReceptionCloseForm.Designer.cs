@@ -38,28 +38,25 @@ namespace SSTattoo
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(24, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(18, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 25);
+            this.label1.Size = new System.Drawing.Size(194, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Заказ:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(24, 50);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(18, 41);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 24);
+            this.comboBox1.Size = new System.Drawing.Size(194, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(56, 134);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(42, 109);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 47);
+            this.button1.Size = new System.Drawing.Size(133, 38);
             this.button1.TabIndex = 2;
             this.button1.Text = "Закрыть заказ";
             this.button1.UseVisualStyleBackColor = true;
@@ -67,13 +64,12 @@ namespace SSTattoo
             // 
             // ReceptionCloseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 197);
+            this.ClientSize = new System.Drawing.Size(226, 160);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReceptionCloseForm";
             this.Text = "Закрыть заказ";
             this.ResumeLayout(false);

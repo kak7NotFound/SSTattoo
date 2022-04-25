@@ -10,27 +10,33 @@ namespace SSTattoo
         public ReceptionCloseForm()
         {
             InitializeComponent();
-            refreshCombobox();
+            refreshComboBox1();
         }
-        
-        // public Dictionary<string, string> savedData = new Dictionary<string, string>();
 
-        public void refreshCombobox()
+        private void refreshComboBox1()
         {
+            comboBox1.Text = "";
             comboBox1.Items.Clear();
-            using (var reader = Program.database.GetReader("select customer, date from Receptions"))
+            comboBox1.Refresh();
+            
+            List<string> nameList = new List<string>();
+
+            using (var reader = Program.database.GetReader("select customer, Receptions.date from Receptions"))
             {
                 while (reader.Read())
                 {
-                    comboBox1.Items.Add(reader.GetString(0) + " " + reader.GetString(1));
+                    nameList.Add(reader.GetString(0) + " " + reader.GetString(1));
                 }
             }
+            
+            comboBox1.Items.AddRange(nameList.Cast<object>().ToArray());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // todo
-            // Program.database.ExecuteNonQuery($"delete from Receptions where );
+            Program.database.ExecuteNonQuery($"delete from Receptions where instr('{comboBox1.Text}', date) > 0.9");
+            refreshComboBox1();
         }
+        
     }
 }
