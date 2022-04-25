@@ -7,7 +7,7 @@ namespace SSTattoo
     public class DataBase : DbContext
     {
         private SqliteConnection connection =
-            new SqliteConnection("Data Source=C:\\Users\\kaks\\Documents\\GitHub\\SSTattoo\\mainDatabase.sqlite");
+            new SqliteConnection("Data Source=C:\\Users\\kak7\\Documents\\GitHub\\SSTattoo\\mainDatabase.sqlite");
 
         public DataBase()
         {
