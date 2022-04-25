@@ -30,7 +30,7 @@ namespace SSTattoo
         private void button1_Click(object sender, EventArgs e)
         {
             // todo
-            Program.database.ExecuteNonQuery($"delete from Receptions where );
+            // Program.database.ExecuteNonQuery($"delete from Receptions where );
         }
     }
 }

@@ -17,8 +17,4 @@ public partial class AddTattooForm : Form
             $"insert into Tattoos (title, price) VALUES ('{this.textBox1.Text}', {this.numericUpDown1.Value})");
     }
 
-    private void label3_Click(object sender, EventArgs e)
-    {
-        throw new System.NotImplementedException();
-    }
 }
