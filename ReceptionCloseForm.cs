@@ -12,6 +12,8 @@ namespace SSTattoo
             InitializeComponent();
             refreshCombobox();
         }
+        
+        // public Dictionary<string, string> savedData = new Dictionary<string, string>();
 
         public void refreshCombobox()
         {
@@ -21,14 +23,14 @@ namespace SSTattoo
                 while (reader.Read())
                 {
                     comboBox1.Items.Add(reader.GetString(0) + " " + reader.GetString(1));
-
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.database.ExecuteNonQuery($"delete from Receptions where instr(date, '{comboBox1.Text}') < 0.1 and instr(customer, '{comboBox1.Text}') < 0.1");
+            // todo
+            Program.database.ExecuteNonQuery($"delete from Receptions where );
         }
     }
 }
