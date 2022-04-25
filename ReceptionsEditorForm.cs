@@ -12,7 +12,6 @@ namespace SSTattoo
             InitializeComponent();
             refreshReception();
             fillData();
-            fillSavedData();
         }
 
 
@@ -59,6 +58,7 @@ namespace SSTattoo
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             using (var reader = Program.database.GetReader($"select * from Receptions"))
             {
                 while (reader.Read())
@@ -78,11 +78,14 @@ namespace SSTattoo
 
                 }
             }
+            fillSavedData();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var dt = dateTimePicker1.Value;
+            Console.Write(savedData["customer"] + " " + savedData["workerName"]);
             Program.database.ExecuteNonQuery($"update Receptions set date = '{listBox1.Text} {dt.Day}.{dt.Month}.{dt.Year}', customer = '{textBox1.Text}', workerName = '{comboBox3.Text}', tattoo = '{comboBox2.Text}' where customer = '{savedData["customer"]}' and workerName = '{savedData["workerName"]}'");
             refreshReception();
         }

@@ -51,7 +51,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(205, 117);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Редактировать приемы";
+            this.button2.Text = "Просмотр и редактирование приемов";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
